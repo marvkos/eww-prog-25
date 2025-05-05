@@ -1,6 +1,6 @@
 package at.technikum.oop.library.items;
 
-public class CD extends Item {
+public class CD extends Item implements Rentable {
 
     private String title;
     private String artist;

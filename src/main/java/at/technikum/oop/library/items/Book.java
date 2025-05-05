@@ -1,6 +1,6 @@
 package at.technikum.oop.library.items;
 
-public class Book extends Item {
+public abstract class Book extends Item {
 
     private String title;
     private String author;

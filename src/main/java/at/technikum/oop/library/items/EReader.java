@@ -1,6 +1,6 @@
 package at.technikum.oop.library.items;
 
-public class EReader extends Item {
+public class EReader extends Item implements Rentable {
 
     private String name;
     private String manufacturer;

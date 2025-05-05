@@ -1,21 +1,19 @@
 package at.technikum.oop.library;
 
-import at.technikum.oop.library.items.Book;
-import at.technikum.oop.library.items.CD;
-import at.technikum.oop.library.items.EReader;
-import at.technikum.oop.library.items.Item;
+import at.technikum.oop.library.items.*;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Book book1 = new Book(
+        NewBook book1 = new NewBook(
                 "Harry Potter",
                 "J. K. R.",
                 1998,
-                true
+                true,
+                "1564684-6868-84"
         );
-        System.out.println(book1.getId());
+        System.out.println(book1.getIsbn());
 
         book1.print();
 
@@ -27,5 +25,8 @@ public class Main {
 
         EReader eReader = new EReader(true, "Kindle 3", "Amazon");
         library.rent(eReader);
+
+        OldBook oldBook = new OldBook("Bibel", "Gutenberg", 1440, false, 100000);
+        library.rent(oldBook);
     }
 }

@@ -1,0 +1,41 @@
+@startuml
+
+abstract Item {
+    # id: string
+}
+
+abstract Book {
+    # title: string
+    # author: string
+}
+
+class ModernBook {
+    - isbn: string
+
+    + isAvailable(): boolean
+}
+
+class AntiqueBook {
+    - value: int
+}
+
+class CD {
+    - title: string
+    - artist: string
+
+    + isAvailable(): boolean
+}
+
+interface Rentable {
+    + {abstract} isAvailable(): boolean
+}
+
+ModernBook --|> Book
+AntiqueBook --|> Book
+Book --|> Item
+CD --|> Item
+
+ModernBook ..|> Rentable
+CD ..|> Rentable
+
+@enduml
