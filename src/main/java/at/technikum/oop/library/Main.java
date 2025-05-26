@@ -27,6 +27,6 @@ public class Main {
         library.rent(eReader);
 
         OldBook oldBook = new OldBook("Bibel", "Gutenberg", 1440, false, 100000);
-        library.rent(oldBook);
+        //library.rent(oldBook);
     }
 }
